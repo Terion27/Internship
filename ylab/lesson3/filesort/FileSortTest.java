@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class FileSortTest {
     public static void main(String[] args) throws IOException {
-        File dataFile = new Generator().generate("data.txt", 100_001);
+        File dataFile = new Generator().generate("data.txt", 100_003);
         System.out.println(new Validator().isSorted(dataFile)); // false
         File sortedFile = new Sorter().sortFile(dataFile);
         System.out.println(new Validator().isSorted(sortedFile)); // true

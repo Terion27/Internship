@@ -2,10 +2,10 @@ package ylab.lesson2.stats_accumulator;
 
 public class StatsAccumulatorImpl implements StatsAccumulator {
 
-    int min = 0;
-    int max = 0;
-    int count = 0;
-    double sum = 0;
+    private int min = 0;
+    private int max = 0;
+    private int count = 0;
+    private double sum = 0;
 
     @Override
     public void add(int value) {

@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.util.Random;
 
 public class Generator {
-    Random random = new Random();
+    private final Random random = new Random();
 
     public File generate(String name, int count) throws IOException {
         File file = new File(name);

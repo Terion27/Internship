@@ -21,7 +21,7 @@ public class PasswordValidatorImpl {
     }
 
     private static void validationLogin(String str) throws WrongLoginException {
-        if (!str.matches("\\w*")) {  // суда по разбяснениям в чате администрацией, пустые значения не являются невалидными.
+        if (!str.matches("\\w*")) {  // судя по разъяснениям в чате администрацией, пустые значения не являются невалидными.
             throw new WrongLoginException("Логин содержит недопустимые символы");
         } else if (str.length() >= 20) {
             throw new WrongLoginException("Логин сдишком длинный");
@@ -29,10 +29,10 @@ public class PasswordValidatorImpl {
     }
 
     private static void validationPassword(String password, String confirmPassword) throws WrongPasswordException {
-        if (!password.matches("\\w*")) {  // суда по разбяснениям в чате администрацией, пустые значения не являются невалидными.
+        if (!password.matches("\\w*")) {  // судя по разъяснениям в чате администрацией, пустые значения не являются невалидными.
             throw new WrongPasswordException("Пароль содержит недопустимые символы");
         } else if (password.length() >= 20) {
-            throw new WrongPasswordException("Пароль сдишком длинный");
+            throw new WrongPasswordException("Пароль слишком длинный");
         } else if (!password.equals(confirmPassword)) {
             throw new WrongPasswordException("Пароль и подтверждение не совпадают");
         }

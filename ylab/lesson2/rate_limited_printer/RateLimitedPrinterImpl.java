@@ -2,8 +2,8 @@ package ylab.lesson2.rate_limited_printer;
 
 public class RateLimitedPrinterImpl implements RateLimitedPrinter {
 
-    int interval;
-    long lastTime;
+    private final int interval;
+    private long lastTime;
 
     public RateLimitedPrinterImpl(int interval) {
         this.interval = interval;
