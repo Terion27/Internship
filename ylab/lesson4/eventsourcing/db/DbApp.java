@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
 public class DbApp {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {  // По условию, не обрабатывать исключение.
         String queueName = "queue";
         DataSource dataSource = initDb();
 
